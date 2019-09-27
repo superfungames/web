@@ -1,0 +1,560 @@
+* {box-sizing: border-box;touch-action:manipulation;-webkit-user-select: none; }
+html {}
+body {font-family: 'Helvetica', sans-serif; font-weight:400; color: #303030; margin:0;padding:0;}
+hr {margin: 0 5%;}
+p, h1, h2, h3, h4 {margin: 0; padding: 0;}
+a {-webkit-tap-highlight-color:transparent;text-decoration: none; color:#3478f6;}
+a:active, a:focus {outline:none;}
+.txt-align-right {text-align: right;}
+
+.fade-in {
+	animation: fadeIn ease 0.3s;
+	-webkit-animation: fadeIn ease 0.3s;
+	-moz-animation: fadeIn ease 0.3s;
+	-o-animation: fadeIn ease 0.3s;
+	-ms-animation: fadeIn ease 0.3s;
+}
+
+.fade-out {
+	animation: fadeOut ease 0.3s;
+	-webkit-animation: fadeOut ease 0.3s;
+	-moz-animation: fadeOut ease 0.3s;
+	-o-animation: fadeOut ease 0.3s;
+	-ms-animation: fadeOut ease 0.3s;
+}
+
+.fade-in-06 {
+	animation: fadeIn ease 1s;
+	-webkit-animation: fadeIn ease 1s;
+	-moz-animation: fadeIn ease 1s;
+	-o-animation: fadeIn ease 1s;
+	-ms-animation: fadeIn ease 1s;
+}
+
+.fade-out-06 {
+	animation: fadeOut ease 1s;
+	-webkit-animation: fadeOut ease 1s;
+	-moz-animation: fadeOut ease 1s;
+	-o-animation: fadeOut ease 1s;
+	-ms-animation: fadeOut ease 1s;
+}
+
+.slide-up {
+	animation: slideUp ease 0.5s;
+	-webkit-animation: slideUp ease 0.5s;
+	-moz-animation: slideUp ease 0.5s;
+	-o-animation: slideUp ease 0.5s;
+	-ms-animation: slideUp ease 0.5s;
+}
+
+.slide-down {
+	animation: slideDown ease 0.5s;
+	-webkit-animation: slideDown ease 0.5s;
+	-moz-animation: slideDown ease 0.5s;
+	-o-animation: slideDown ease 0.5s;
+	-ms-animation: slideDown ease 0.5s;
+}
+
+@keyframes fadeIn{
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@keyframes fadeOut{
+  0% {
+    opacity:1;
+  }
+  100% {
+    opacity:0;
+  }
+}
+
+@keyframes slideUp{
+  0% {
+    top:100%;
+  }
+  100% {
+    top:0%;
+  }
+}
+
+@keyframes slideDown{
+  0% {
+    top:0%;
+  }
+  100% {
+    top:100%;
+  }
+}
+
+#guide {
+	width:100%;
+	height:10000px;
+	background: transparent url(../img/guide.png) no-repeat;
+	position: absolute;
+	background-size: contain;
+	opacity: 0.6;
+}
+
+#panel {
+	
+}
+
+#panel #main {
+	padding-top:48px;
+}
+
+#panel nav {
+	overflow: hidden;
+	padding:10px 3%;
+	height:48px;
+	position:fixed;
+	width:100%;
+	background:#fff;
+	z-index:9999;
+}
+
+#panel nav #topnav-left {
+	overflow: hidden;
+	width:40%;
+	height: 40px;
+	float: left;
+}
+
+#panel nav #topnav-left a { 
+	display: block;
+	height:24px;
+	line-height: 20px;
+	background:transparent url(../img/appstore/icon_topnav_back.png) no-repeat;
+	background-size:contain;
+	padding:2px 0 2px 18px;
+	font-size:16px;
+}
+
+#panel nav #topnav-center {
+	overflow: hidden;
+	width:20%;
+	height: 40px;
+	float: left;
+	text-align: center;
+	animation-fill-mode: forwards;
+	display: none;
+}
+
+#panel nav #topnav-center img {
+	display: block;
+	height:28px;
+	margin: 0 auto;
+	border-radius: 10px;
+	border:solid 1px #f8f8f8;
+}
+
+#panel nav #topnav-right {
+	overflow: hidden;
+	width:40%;
+	height: 40px;
+	float: left;
+	animation-fill-mode: forwards;
+	display: none;
+}
+
+#panel nav #topnav-right button {
+	width:60px;
+	height:28px;
+	line-height: 26px;
+	margin:0;
+	display:block;
+	float:left;
+	background:#3478f6;
+	color:#fff;
+	font-size:14px;
+	font-weight:600;
+	border-radius: 24px;
+	border:0;
+	float:right;
+}
+
+#panel nav #topnav-right span {
+	width:40px;
+	font-size:9px;
+	line-height:10px;
+	color:#8e8f92;
+	display:block;
+	float:right;
+	margin:0 10px 0 0;
+	padding:4px 0;
+	text-align: right;
+}
+
+#main header {
+	padding:14px 5%;
+	overflow: hidden;
+}
+
+#main header #app-icon {
+	float:left;
+	width:35%;
+}
+
+#main header #app-info {
+	float:left;
+	width:60%;
+	margin:0 0 0 5%;
+}
+
+#main header #app-info #app-title {
+	overflow: hidden;
+}
+
+#main header #app-info #app-action {
+	overflow: hidden;
+}
+
+#main header img {
+	display:block;
+	width:100%;
+	border-radius: 25%;
+	border:solid 1px #ccc;
+}
+
+#main header h1 {
+	font-size:22px;
+	font-weight:600;
+	color:#000;
+}
+
+#main header h2 {
+	font-size:16px;
+	font-weight:400;
+	color:#8e8f92;
+	height:54px;
+}
+
+#main header h2 span{
+	display:block;
+	animation-fill-mode: forwards;
+}
+
+#main header h2 span#txt-publisher{
+	position:relative;
+	top:-22px;
+	margin-bottom:-24px;
+	opacity: 0;
+	display: none;
+}
+
+#main header button#btn-get {
+	width:80px;
+	height:34px;
+	line-height: 34px;
+	margin:0;
+	display:block;
+	float:left;
+	background:#3478f6;
+	color:#fff;
+	font-weight:600;
+	border-radius: 24px;
+	border:0;
+	font-size:16px;
+}
+
+#main header span#txt-get {
+	width:40px;
+	font-size:10px;
+	line-height:11px;
+	color:#8e8f92;
+	display:block;
+	float:left;
+	margin:0 0 0 10px;
+	padding:6px 0 0 0;
+}
+
+#main header button#btn-menu {
+	width:34px;
+	height:34px;
+	line-height: 34px;
+	margin:0;
+	display:block;
+	float:right;
+	background:#3478f6;
+	color:#fff;
+	font-weight:500;
+	border:0;
+	background:transparent url(../img/appstore/icon_menu.png) no-repeat;
+	background-size:contain;
+}
+
+
+#main section#section-rating {
+	padding:14px 5%;
+	overflow: hidden;
+}
+
+#main section#section-rating label {
+	display: block;
+	font-size:11px;
+	color:#9f9fa0;
+}
+
+#main section#section-rating #app-age label{
+	text-align: center;
+}
+
+#main section#section-rating #app-rating{
+	float:left;
+}
+
+#main section#section-rating #app-ranking{
+	float:left;
+	text-align: center;
+	margin-left:50px;
+}
+
+#main section#section-rating #app-age{
+	float:right;
+}
+
+#main section#section-rating #app-rating #app-stars{
+	overflow:hidden;
+	height:36px;
+	line-height: 36px;
+}
+
+#main section#section-rating #app-rating #app-stars span.score {
+	display:block;
+	float:left;
+	height:36px;
+	line-height: 36px;
+	color:#8e8f92;
+	font-size:26px;
+	font-weight: 500;
+	padding-right:4px;
+}
+
+#main section#section-rating #app-rating #app-stars span.star-full {
+	display:block;
+	float:left;
+	width:22px;
+	height:20px;
+	margin:7px 0;
+	background: transparent url(../img/appstore/icon_star.png) no-repeat;
+	background-size: contain;
+}
+
+#main section#section-rating #app-rating #app-stars span.star-half {
+	display:block;
+	float:left;
+	width:22px;
+	height:20px;
+	margin:7px 0;
+	background: transparent url(../img/appstore/icon_star_half.png) no-repeat;
+	background-size: contain;
+}
+
+#main section#section-rating #app-rating #app-stars span.star-empty {
+	display:block;
+	float:left;
+	width:22px;
+	height:20px;
+	margin:7px 0;
+	background: transparent url(../img/appstore/icon_star_empty.png) no-repeat;
+	background-size: contain;
+}
+
+#main section#section-rating #app-age span.txt-age {
+	display:block;
+	float:right;
+	height:36px;
+	line-height: 36px;
+	color:#8e8f92;
+	font-size:26px;
+	font-weight: 500;
+}
+
+#main section#section-rating #app-ranking #app-position{ 
+	height:36px;
+	font-size:26px;
+	font-weight: 500;
+	color:#8e8f92;
+}
+
+#main section#section-rating #app-ranking #app-position span {
+	font-size:17px;
+	vertical-align: top;
+	line-height: 30px;
+}
+
+#main section#section-gallery {
+	padding:14px 5%;
+	overflow: hidden;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+	width:60%;
+}
+
+.gallery-img {
+	/*width:220px;*/
+}
+
+.gallery-img img {
+	display: block;
+	width: 100%;
+	/*height:100%;*/
+	border-radius: 16px;
+	/*border:solid 1px #ccc;*/
+}
+
+#main section#section-desc {
+	padding:14px 5%;
+	overflow: hidden;
+}
+
+#main section#section-desc p {
+	line-height: 22px;
+}
+
+#main section#section-desc p.txt-fadeout {
+	width:80%;
+	height:22px;
+	float:left;
+    background-image: linear-gradient(90deg,#000000 0%,rgba(0,0,0,0));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position:relative;
+    display:inline-block;
+}
+
+#main section#section-desc p#btn-more {
+	width:20%;
+	float:left;
+}
+
+#gallery {
+	position:fixed;
+	width:100%;
+	height:100%;
+	background:white;
+	top:100%;
+	z-index:10000;
+	animation-fill-mode: forwards;
+	padding:0 5%;
+
+}
+
+#gallery #nav-gallery {
+	height:48px;
+	padding:12px 0;
+	line-height: 28px;
+}
+
+#gallery #nav-gallery a {
+	display:block;
+	float: right;
+	line-height: 28px;
+	font-weight:500;
+}
+
+#gallery #gallery-items {
+	height:84%;
+	margin:5% 0 0 0;
+}
+
+#gallery #gallery-items .gallery-img {
+	height: 100%;
+	overflow: hidden;
+}
+
+#gallery #gallery-items .gallery-img img { 
+	width:100%;
+	height:auto;
+}
+
+#gallery .swiper-slide {
+	width:90%;
+}
+
+
+#main section#section-offer {
+	padding:0 5% 14px 5%;
+	overflow: hidden;
+}
+
+#main section#section-offer a#btn-offer { 
+	display:block;
+	color:#aaa;
+	height:20px;
+	line-height: 20px;
+	font-size:13px;
+	font-weight:500;
+	float:left;
+	background:transparent url(../img/appstore/icon_ipad.png) no-repeat;
+	background-size: contain;
+	padding-left:30px;
+}
+
+#main section#section-offer a#btn-offer-toggle { 
+	display:block;
+	color:#aaa;
+	width:20px;
+	height:20px;
+	font-size:13px;
+	font-weight:500;
+	float:right;
+	background:transparent url(../img/appstore/icon_down.png) no-repeat;
+	background-size: contain;
+}
+
+#main section#section-dev {
+	padding:0 5% 20px 5%;
+	overflow: hidden;
+}
+
+#main section#section-dev p {
+	float:left;
+}
+
+#main section#section-dev p a {
+	font-size:16px;
+	line-height: 20px;
+	display: block;
+}
+
+#main section#section-dev p label {
+	font-size:12px;
+	line-height: 14px;
+	color:#666;
+	display: block;
+}
+
+#main section#section-dev a#btn-toggle {
+	display:block;
+	color:#aaa;
+	width:20px;
+	height:20px;
+	font-size:14px;
+	font-weight:500;
+	float:right;
+	background:transparent url(../img/appstore/icon_right.png) no-repeat;
+	background-size: contain;
+}
+
+
+
+
+
+
+
+
+
+
+

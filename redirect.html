@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+
+    <script>
+        var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+        var currentOs = "PC";
+        if (/windows phone/i.test(userAgent)) {
+            currentOs = "Windows Phone";
+        }
+        if (/android/i.test(userAgent)) {
+            currentOs = "Android";
+        }
+        if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+            currentOs = "iOS";
+        }
+        if(currentOs == "PC")
+            location.href = "https://biggergames.net";
+
+        var site_id      = "BiggerRedirect";
+        var camp_ios     = "https://track.tenjin.io/v0/click/cuhMk6jWxJ9vxlcYxb6tl3";
+        var camp_a_ios   = "https://track.tenjin.io/v0/click/dIYPvW4kE4N5c71N2GLcjJ";
+        var camp_android = "https://track.tenjin.io/v0/click/e9ODIOXBMLBbJc0acKXLNx";
+
+        
+
+        function RedirectToStore() {
+            var params = {};
+            window.location.search.substr(1).split("&").forEach(function(item) { params[item.split("=")[0]] = item.split("=")[1] });
+            var utm_source = params.site_source_name;
+            //var utm_medium = params.placement; // ignored
+            var utm_campaign = params.name;
+            var ad_id = params.adid;
+            var os = params.os;
+            var campType = params.camp;
+
+            var _camp = "";
+            if(os == "ios"){
+                if(campType == "a")     { _camp = camp_a_ios; }
+                else                    { _camp = camp_ios; }
+            }
+            else if (os == "android") {
+                _camp = camp_android;
+            }
+            else {
+                return;
+            }
+
+            var red_URL = `${_camp}?advertising_id=${ad_id}&site_id=${site_id}&ad_network=${utm_source}&campaign_name=${utm_campaign}`;
+            window.location.href = red_URL;
+        }
+    </script>
+</head>
+<body onload="RedirectToStore()">
+</body>
+</html>
