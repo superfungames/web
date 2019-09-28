@@ -32,7 +32,7 @@ $(function () {
     //var utm_medium = params.placement;
     var utm_campaign = params.name;
     var ad_id = params.adid;
-    var site_id = "Bigger";
+    var site_id = "BiggerGit";
     var os = params.os;
     var campType = params.camp;
     
