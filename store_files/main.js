@@ -104,6 +104,7 @@ $(function () {
     var red_URL = `${_camp}?advertising_id=${ad_id}&site_id=${site_id}&ad_network=${utm_source}&campaign_name=${utm_campaign}`;
 
     var register = window.localStorage.getItem(pixelSent);
+    console.log("tracking? " + register);
     if (register == false) {
       snaptr('track', 'VIEW_CONTENT');
       window.localStorage.setItem(pixelSent, true);
