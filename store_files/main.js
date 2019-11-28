@@ -107,10 +107,11 @@ $(function () {
     if (register == false) {
       snaptr('track', 'VIEW_CONTENT');
       window.localStorage.setItem(pixelSent, true);
+      console.log('tracked');
     }
 
     location.href = red_URL;
-    
+
 	})
 
 	var currentScrollPos = window.pageYOffset;
