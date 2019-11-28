@@ -105,9 +105,9 @@ $(function () {
 
     var register = window.localStorage.getItem(pixelSent);
     console.log("tracking? " + register);
-    if (register == false) {
+    if (register == 0) {
       snaptr('track', 'VIEW_CONTENT');
-      window.localStorage.setItem(pixelSent, true);
+      window.localStorage.setItem(pixelSent, 1);
       console.log('tracked');
     }
 
