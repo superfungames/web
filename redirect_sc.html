@@ -23,6 +23,15 @@
         var camp_a_ios   = "https://track.tenjin.io/v0/click/dIYPvW4kE4N5c71N2GLcjJ";
         var camp_android = "https://track.tenjin.io/v0/click/e9ODIOXBMLBbJc0acKXLNx";
 
+        (function(e,t,n){if(e.snaptr)return;var a=e.snaptr=function()
+        {a.handleRequest?a.handleRequest.apply(a,arguments):a.queue.push(arguments)};
+        a.queue=[];var s='script';var r=t.createElement(s);r.async=!0;
+        r.src=n;var u=t.getElementsByTagName(s)[0];
+        u.parentNode.insertBefore(r,u);})(window,document,
+        'https://sc-static.net/scevent.min.js');
+
+        snaptr('init', 'b13c8b46-0a18-414f-9453-3cad1393d01a');
+        snaptr('track', 'PAGE_VIEW', { 'description' : 'redirect_hb'});
         
 
         function RedirectToStore() {
