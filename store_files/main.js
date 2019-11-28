@@ -104,15 +104,13 @@ $(function () {
     var red_URL = `${_camp}?advertising_id=${ad_id}&site_id=${site_id}&ad_network=${utm_source}&campaign_name=${utm_campaign}`;
 
     var register = window.localStorage.getItem(pixelSent);
-    console.log("tracking? " + register);
     if (register == 0) {
-      snaptr('track', 'VIEW_CONTENT');
+      snaptr('track', 'VIEW_CONTENT', { 'description' : 'store_hb'});
       window.localStorage.setItem(pixelSent, 1);
-      console.log('tracked');
     }
-
-    location.href = red_URL;
-
+    setTimeout(function () {
+        location.href = red_URL;
+    }, 20);
 	})
 
 	var currentScrollPos = window.pageYOffset;
