@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html class="js sizes customelements history pointerevents postmessage webgl websockets cssanimations csscolumns csscolumns-width csscolumns-span csscolumns-fill csscolumns-gap csscolumns-rule csscolumns-rulecolor csscolumns-rulestyle csscolumns-rulewidth csscolumns-breakbefore csscolumns-breakafter csscolumns-breakinside flexbox picture srcset webworkers" lang=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1.0, user-scalable=0">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.css"> -->
+  <link rel="stylesheet" href="./store_files/swiper.min.css">
+  <link rel="stylesheet" href="./store_files/normalize.css">
+  <link rel="stylesheet" href="./store_files/main.css">
+  <link rel="stylesheet" href="./store_files/style.css">
+
+  
+
+  <script>
+    var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+    var currentOs = "PC";
+    if (/windows phone/i.test(userAgent)) {
+        currentOs = "Windows Phone";
+    }
+
+    if (/android/i.test(userAgent)) {
+      currentOs = "Android";
+    }
+
+    if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+      currentOs = "iOS";
+    }
+
+    if(currentOs == "PC")
+      location.href = "https://biggergames.net";
+
+  </script>
+  <!-- Facebook Pixel Code -->
+  <script>
+    var fbPixelId = "1329357433915333";
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window,document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', fbPixelId); 
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" src="https://www.facebook.com/tr?id=656326074858407&ev=PageView&noscript=1"/></noscript>
+	<!-- End Facebook Pixel Code -->
+</head>
+
+<body>
+
+  <!-- <div id="guide"></div> -->
+  <!-- 4x Preview Image 1242x2688 PNG or JPG -->
+  <!-- 1x Icon 512x512 -->
+
+  <div id="panel">
+    <nav id="topnav">
+      <div id="topnav-left">
+        <a href="javascript:;">Games</a>
+      </div>
+      <div id="topnav-center" style="opacity: 0;">
+        <img id="iconSmall"> 
+      </div>
+      <div id="topnav-right" style="opacity: 0;">
+        <button class="btn-install">GET</button>
+        <!-- <span>In-App Purchases</span> -->
+      </div>
+    </nav>
+    <div id="main">
+      <header>
+        <div id="app-icon">
+          <img id="iconLarge"> 
+        </div>
+        <div id="app-info">
+          <div id="app-title">
+            <h1>Hollo Ball</h1>
+            <h2>
+              <span id="txt-subtitle" class="fade-out-06">Infinite Fun!</span>
+              <span id="txt-publisher" class="fade-in-06" style="display: inline;">Bigger Games</span>
+            </h2>
+          </div>
+          <div id="app-action">
+            <button id="btn-get" class="btn-install">GET</button>
+            <!--<span id="txt-get">In-App Purchases</span>-->
+            <button id="btn-menu"></button>
+          </div>
+        </div>
+      </header>
+
+      <section id="section-rating">
+        <div id="app-rating">
+          <div id="app-stars">
+            <span class="score">4.6</span>
+            <span class="star-full"></span>
+            <span class="star-full"></span>
+            <span class="star-full"></span>
+            <span class="star-full"></span>
+            <span class="star-half"></span>
+          </div>
+          <label>5.3K Ratings</label>
+        </div>
+        <div id="app-ranking">
+          <div id="app-position">
+            <span>#</span>116
+          </div>
+          <label>in Action</label>
+        </div>
+        <div id="app-age">
+          <span class="txt-age">4+</span>
+          <label class="txt-align-right">Age</label>
+        </div>
+      </section>
+
+      <section id="section-gallery">
+        <div class="swiper-container swiper-container-initialized swiper-container-horizontal">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper" style="transform: translate3d(0px, 0px, 0px);">
+              <!-- Slides -->
+              <div class="swiper-slide swiper-slide-active" style="margin-right: 10px;">
+                <div class="gallery-img">
+                  <img id="preview1small">
+                </div>
+              </div>
+              <div class="swiper-slide swiper-slide-next" style="margin-right: 10px;">
+                <div class="gallery-img">
+                <img id="preview2small">
+                </div>
+              </div>
+              <div class="swiper-slide" style="margin-right: 10px;">
+                <div class="gallery-img">
+                <img id="preview3small">
+                </div>
+              </div>
+              <div class="swiper-slide" style="margin-right: 10px;">
+                <div class="gallery-img">
+                <img id="preview4small">
+                </div>
+              </div>
+          </div>
+        <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+      </section>
+
+      <section id="section-offer">
+        <a href="javascript:;" id="btn-offer">Offers iPad App</a>
+        <a href="javascript:;" id="btn-offer-toggle"></a>
+      </section>
+
+      <hr>
+
+      <section id="section-desc">
+        <p>
+            Hollo Ball will keep you hooked for hours! <br/> One finger control. Easy to play, hard to master.
+        </p>
+        <p id="txt-more" class="txt-fadeout">
+            Features unlimited gameplay. <br/> Build your newest addiction!
+        </p>
+        <p id="btn-more"><a href="javascript:;">more</a></p>
+      </section>
+
+      <section id="section-dev">
+        <p>
+          <a href="javascript:;">Bigger Games</a>
+          <label>Developer</label>
+        </p>
+        <a href="javascript:;" id="btn-toggle"></a>
+      </section>
+    </div>
+
+    <div id="rest">
+      <img src="./store_files/images/landing.png" style="display: block;width:100%;">
+    </div>
+  </div>
+
+  
+
+  <div id="gallery">
+    <div id="nav-gallery">
+      <a href="javascript:;">Done</a>
+    </div>
+    <div id="gallery-items">
+      <div id="gallery-swiper-container" class="swiper-container swiper-container-initialized swiper-container-horizontal">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper" style="transform: translate3d(0px, 0px, 0px);">
+              <!-- Slides -->
+              <div class="swiper-slide swiper-slide-active" style="margin-right: 10px;">
+                <div class="gallery-img">
+                  <img id="preview1large">
+                </div>
+              </div>
+              <div class="swiper-slide swiper-slide-next" style="margin-right: 10px;">
+                <div class="gallery-img">
+                  <img id="preview2large">
+                </div>
+              </div>
+              <div class="swiper-slide" style="margin-right: 10px;">
+                <div class="gallery-img">
+                  <img id="preview3large">
+                </div>
+              </div>
+              <div class="swiper-slide" style="margin-right: 10px;">
+                <div class="gallery-img">
+                  <img id="preview4large">
+                </div>
+              </div>
+          </div>
+        <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span><span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+    </div>
+  </div>
+
+  <script src="./store_files/modernizr-3.7.1.min.js"></script>
+  <script src="./store_files/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="../js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
+
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.js"></script> -->
+  <script src="./store_files/swiper.min.js"></script>
+  <script src="./store_files/bodyScrollLock.min.js"></script>
+  <script src="./store_files/plugins.js"></script>
+  <script src="./store_files/main.js"></script>
+
+  <script>
+
+    var preview1 = "1.jpg";
+    var preview2 = "2.jpg";
+    var preview3 = "3.jpg";
+    var preview4 = "4.jpg";
+    var icon = "icon.png";
+
+    // small previews
+    document.getElementById("preview1small").src = "./store_files/images/"+preview1;
+    document.getElementById("preview2small").src = "./store_files/images/"+preview2;
+    document.getElementById("preview3small").src = "./store_files/images/"+preview3;
+    document.getElementById("preview4small").src = "./store_files/images/"+preview4;
+
+    // large previews
+    document.getElementById("preview1large").src = "./store_files/images/"+preview1;
+    document.getElementById("preview2large").src = "./store_files/images/"+preview2;
+    document.getElementById("preview3large").src = "./store_files/images/"+preview3;
+    document.getElementById("preview4large").src = "./store_files/images/"+preview4;
+
+    // icons
+    document.getElementById("iconSmall").src = "./store_files/images/"+icon;
+    document.getElementById("iconLarge").src = "./store_files/images/"+icon;
+
+
+    var mySwiper = new Swiper ('.swiper-container', {
+      // Optional parameters
+      // direction: 'vertical',
+      // loop: true,
+
+      // If we need pagination
+      // pagination: {
+      //   el: '.swiper-pagination',
+      // },
+
+      // Navigation arrows
+      // navigation: {
+      //   nextEl: '.swiper-button-next',
+      //   prevEl: '.swiper-button-prev',
+      // },
+
+      // And if we need scrollbar
+      // scrollbar: {
+      //   el: '.swiper-scrollbar',
+      // },
+      slidesPerView: 'auto',
+      spaceBetween: 10,
+    })
+
+    var mySwiper = new Swiper ('#gallery-swiper-container', {
+      // Optional parameters
+      // direction: 'vertical',
+      // loop: true,
+
+      // If we need pagination
+      // pagination: {
+      //   el: '.swiper-pagination',
+      // },
+
+      // Navigation arrows
+      // navigation: {
+      //   nextEl: '.swiper-button-next',
+      //   prevEl: '.swiper-button-prev',
+      // },
+
+      // And if we need scrollbar
+      // scrollbar: {
+      //   el: '.swiper-scrollbar',
+      // },
+      slidesPerView: 'auto',
+      spaceBetween: 10,
+    })
+  </script>
+
+
+
+</body></html>
