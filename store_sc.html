@@ -38,17 +38,17 @@
   </script>
   <!-- Facebook Pixel Code -->
   <script>
-    var fbPixelId = "1329357433915333";
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window,document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', fbPixelId); 
-    fbq('track', 'PageView');
+    var pixelSent = false;
+    (function(e,t,n){if(e.snaptr)return;var a=e.snaptr=function()
+    {a.handleRequest?a.handleRequest.apply(a,arguments):a.queue.push(arguments)};
+    a.queue=[];var s='script';var r=t.createElement(s);r.async=!0;
+    r.src=n;var u=t.getElementsByTagName(s)[0];
+    u.parentNode.insertBefore(r,u);})(window,document,
+    'https://sc-static.net/scevent.min.js');
+
+    snaptr('init', 'b13c8b46-0a18-414f-9453-3cad1393d01a');
+    snaptr('track', 'PAGE_VIEW');
+    
   </script>
   <noscript><img height="1" width="1" src="https://www.facebook.com/tr?id=656326074858407&ev=PageView&noscript=1"/></noscript>
 	<!-- End Facebook Pixel Code -->
@@ -63,13 +63,13 @@
   <div id="panel">
     <nav id="topnav">
       <div id="topnav-left">
-        <a href="javascript:;">Gamesss</a>
+        <a href="javascript:;">Games</a>
       </div>
       <div id="topnav-center" style="opacity: 0;">
         <img id="iconSmall"> 
       </div>
       <div id="topnav-right" style="opacity: 0;">
-        <button class="btn-install">GET</button>
+        <button class="btn-install-sc">GET</button>
         <!-- <span>In-App Purchases</span> -->
       </div>
     </nav>
@@ -87,7 +87,7 @@
             </h2>
           </div>
           <div id="app-action">
-            <button id="btn-get" class="btn-install">GET</button>
+            <button id="btn-get" class="btn-install-sc">GET</button>
             <!--<span id="txt-get">In-App Purchases</span>-->
             <button id="btn-menu"></button>
           </div>
